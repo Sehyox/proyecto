@@ -3,23 +3,20 @@
 <coches>
 		  <coche numero="Touareg">
 			   <image ruta="../fotos/Touareg.jpg"/>
-			   <nombre> Touareg</nombre>
 			   <precio> 32.900 </precio>
 			   <web enlace="https://www.motorpasion.com/pruebas-de-coches/volkswagen-touareg-2018-prueba-contacto">
 			   Touareg</web>
 		   </coche>
 		<coche numero="polo">
 			<image ruta="../fotos/polo.jpg"/>
-			<nombre> Polo </nombre>
 			<precio> 16.000 </precio>
-			<web enlace="https://www.volkswagen.es/">
+			<web enlace="https://www.volkswagen.es/es/modelos/polo.html">
 			Polo</web>
 		</coche>
 		<coche numero="golf">
 			<image ruta="../fotos/golf.jpg"/>
-			<nombre> Golf </nombre>
 			<precio> 23.000 </precio>
-			<web enlace="https://www.volkswagen.es/">
+			<web enlace="https://www.volkswagen.es/es/modelos/golf.html">
 			Golf</web>
 		</coche>
 	</coches>
