@@ -3,10 +3,160 @@
 <xsl:template match="coches">
 	<html>
 <head>
-<link rel="stylesheet" type="text/css" href="../css/prejecto.css">
+<style>
+ body{
+background-image: url(../fotos/definitiva.jpg);
+background-repeat: no-repeat;
+background-width: 100%;
+background-height: 100%;
+background-attachment: fixed;
+background-position: center center;
+}
+header{
+background-color: #2CE3FC;
+text-align: center;
+font-size: 40px;
+text-transform: uppercase;
+font-family: impact;
+color: red;
+border-radius: 12px;
+}
+ footer{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+ }
+ .link{
+  background-color: red;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+ }
+nav {
+  text-align: center;
+}
+article{
+  margin-left: 150px;
+  margin-right: 150px;
+  background-color: white;
+}
+.el_boton {
+    position: relative;
+    display: inline-block;
+}
+.lasMarcas{
+  background-color: blue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+
+}
+
+.loqbaha {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.loqbaha a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.loqbaha a:hover {background-color: #ddd}
+
+.el_boton:hover .loqbaha {
+    display: block;
+}
+
+.slydeshow-container{
+  max-width: 900px;
+  position: relative;
+
+
+}
+
+.mySlides{
+  display: none;
+  animation-direction: reverse;
+  animation-duration: 5s;
+  animation-fill-mode: all;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin: center;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  background-color: black;
+}
+.next{
+  right: 150px;
+
+}
+
+.card {
+     background-color: #DFDFDF;
+     padding: 20px;
+     margin-top: 20px;
+}
+
+.form1{
+  background-color: white;
+  width: 300px;
+  height: auto;
+  border-style: solid;
+  border-color: blue;
+  text-align: center;
+  position: absolute;
+  margin-left: 500px;
+
+
+
+}
+
+.cuadros {
+    box-sizing: border-box;
+}
+
+
+#footer {
+  position: fixed;
+  bottom: 0px;  
+  color: white;
+  margin-top: 10px;
+}
+
+.fondoxsl{
+  background-color: white;
+  text-align: center;
+}
+</style>
 <title> volskwagen</title>
 </head>
 <body>
+  <header>coches de mierda</header>
 <nav>  
 <a href="../html/inicio.html" class="link">inicio</a>  
 <a href="../html/noticias.html" class="link" >noticias</a>
@@ -26,7 +176,40 @@
 </div>
 
   </nav>
+<div >
+  <h1 class="fondoxsl">Coches Volskwagen</h1>
 
+<xsl:for-each select="coche">
+<div class="personaje" style="float: left; width: 300px;"  >
+  <h3> Novedad: <xsl:value-of select="@numero"/></h3>
+  <div style="width: 70px; float: left;">
+     <xsl:element name="img">
+       <xsl:attribute name="src">
+         <xsl:value-of select="image/@ruta"/>
+       </xsl:attribute>
+       <xsl:attribute name="height">
+         100
+       </xsl:attribute>
+     </xsl:element>
+</div>
+  <ul  style="float: left;">
+    
+    <li>
+      <a>
+        <xsl:attribute name="href">
+          <xsl:value-of select="web/@enlace"/>
+        </xsl:attribute>
+        <xsl:value-of select="web"/>
+      </a>
+    </li>
+
+    <li><xsl:value-of select="precio"/></li>
+    
+  </ul>
+
+</div>
+</xsl:for-each>
+</div>
  
  
 </body>
