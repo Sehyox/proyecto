@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<?xml-stylesheet type="text/xsl" href="cochesa.xsl"?>
+<coches>
+		  <coche numero="BMW Serie 6">
+			   <image ruta="../fotos/bmw_serie_1.jpg"/>
+			   <precio> 103.900 </precio>
+			   <web enlace="https://www.bmw.es/es/coches-bmw/serie-6/convertible/2014/presentacion.html">
+			   serie 6</web>
+		   </coche>
+		<coche numero="BMW Serie 2">
+			<image ruta="../fotos/bmw_serie_2.jpg"/>
+			<precio> 27.080 </precio>
+			<web enlace="https://www.bmw.es/es/coches-bmw/serie-2/coupe/2017/diseno.html">
+			serie 2</web>
+		</coche>
+		<coche numero="BMW Serie 3">
+			<image ruta="../fotos/bmw_serie_3.jpg"/>
+			<precio> 50.000 </precio>
+			<web enlace="https://www.bmw.es/es/coches-bmw/serie-3/berlina/2015/presentacion.html">
+			serie 3</web>
+		</coche>
+	</coches>
