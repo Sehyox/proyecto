@@ -152,13 +152,49 @@ article{
   background-color: white;
   text-align: center;
 }
+
+.container {
+  position: relative;
+  width: 100%;
+  margin-left:100px;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+   width: 355px;
+  left: 0;  
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+
+  white-space: nowrap;
+}
 </style>
 <title> volskwagen</title>
 </head>
 <body>
   <header>coches de mierda</header>
-<nav>  
-<a href="../html/inicio.html" class="link">inicio</a>  
+<nav>
+<a href="../index.html" class="link">inicio</a>  
 <a href="../html/noticias.html" class="link" >noticias</a>
 <div class="el_boton">
   <button class="lasMarcas">marcas</button>
@@ -174,25 +210,28 @@ article{
     <a href="../html/log_in.html">log in</a>
   </div>
 </div>
-
-  </nav>
+</nav>
 <div >
   <h1 class="fondoxsl">Coches Volskwagen</h1>
 
 <xsl:for-each select="coche">
 <div class="personaje" style="float: left; width: 300px;"  >
-  <h3> Novedad: <xsl:value-of select="@numero"/></h3>
-  <div style="width: 70px; float: left;">
+  
+  
+</div>
+  <div class="container">
+    <div >
      <xsl:element name="img">
        <xsl:attribute name="src">
          <xsl:value-of select="image/@ruta"/>
        </xsl:attribute>
        <xsl:attribute name="height">
-         100
+         200
        </xsl:attribute>
      </xsl:element>
-</div>
-  <ul  style="float: left;">
+  <div class="overlay">
+    <div class="text">
+     <ul>
     
     <li>
       <a>
@@ -206,6 +245,10 @@ article{
     <li><xsl:value-of select="precio"/></li>
     
   </ul>
+
+    </div>
+  </div>
+</div>
 
 </div>
 </xsl:for-each>
