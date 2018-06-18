@@ -25,6 +25,13 @@ border-radius: 12px;
   bottom: 0;
   width: 100%;
  }
+ .f{
+  width: 100%;
+  color: white;
+  display: block;
+  background-color: black;
+
+ }
  .link{
  	background-color: red;
     color: white;
