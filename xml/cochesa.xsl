@@ -200,7 +200,7 @@ article{
   <button class="lasMarcas">marcas</button>
   <div class="loqbaha">
     <a href="../xml/coches.xml">wolvagen</a>
-    <a href="#">bmw</a>
+    <a href="../xml/coches2.xml">bmw</a>
   </div>
 </div>  
 <div class="el_boton">
